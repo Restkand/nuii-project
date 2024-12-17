@@ -1,0 +1,61 @@
+@font-face {
+  font-family: "Sharp Grotesk Light";
+  src: url("../../assets/fonts/Sharp_Grotesk/SharpGrotesk-Book20.otf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Sharp Grotesk Bold";
+  src: url("../../assets/fonts/Sharp_Grotesk/SharpGrotesk-Bold20.otf")
+    format("truetype");
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 300px;
+  margin: 20px auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card-icon {
+  font-size: 40px;
+  color: #4caf50;
+  margin-bottom: 10px;
+}
+
+.card-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.card-content {
+  text-align: center;
+}
+
+.card-title {
+  font-family: "Sharp Grotesk Bold", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  font-family: "Sharp Grotesk Light", sans-serif;
+  font-size: 14px;
+  color: #555555;
+}

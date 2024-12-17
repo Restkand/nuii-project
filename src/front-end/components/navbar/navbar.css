@@ -1,0 +1,144 @@
+@font-face {
+  font-family: "Sharp Grotesk";
+  src: url("../../assets/fonts/Sharp_Grotesk/SharpGrotesk-Bold20.otf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("../../assets/fonts/Sharp_Grotesk/SharpGrotesk-Bold20.otf")
+    format("truetype");
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  padding: 8px;
+  background-color: white;
+  position: sticky;
+  z-index: 2;
+}
+
+.text-yellow {
+  color: #efba0f;
+}
+
+.text-purple {
+  color: #700db7;
+}
+
+.text-orange {
+  color: #ff6700;
+}
+
+.logo {
+  font-family: "Open Sans", sans-serif;
+  font-size: 45px;
+  padding-left: 10px;
+}
+
+.nav {
+  display: flex;
+}
+
+/*Desktop*/
+.nav_right {
+  font-family: "Sharp Grotesk", sans-serif;
+  font-size: 20px;
+  padding-right: 20px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav_right a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  transition: color 0.4s ease;
+  padding: 5px 10px;
+}
+
+.nav_right a:hover {
+  color: #efba0f;
+}
+
+.nav_right button {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  transition: color 0.4s ease;
+  padding: 5px 10px; /* Sama seperti <a> */
+  border: none; /* Hilangkan border bawaan <button> */
+  background: none; /* Hilangkan background bawaan <button> */
+  cursor: pointer; /* Tampilkan kursor pointer */
+}
+
+.nav_right button:hover {
+  color: #efba0f; /* Warna hover sama seperti <a> */
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  transition: transform 0.2s ease, opacity 0.3s ease;
+}
+.hamburger.open .bar:nth-child(1) {
+  transform: rotate(45deg) translateY(11px);
+}
+
+.hamburger.open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open .bar:nth-child(3) {
+  transform: rotate(-45deg) translateY(-11px);
+}
+
+/* Mobile*/
+.nav {
+  font-family: "Sharp Grotesk", sans-serif;
+  font-size: 12px;
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background-color: white;
+  width: 100%;
+  text-align: right;
+  padding: 10px 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav.active {
+  display: flex;
+}
+
+.nav a {
+  margin: 10px 20px;
+}
+
+@media (max-width: 1080px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav_right {
+    display: none;
+  }
+
+  .nav.active {
+    display: flex;
+  }
+}

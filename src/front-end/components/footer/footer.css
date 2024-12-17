@@ -1,0 +1,38 @@
+@font-face {
+  font-family: "Sharp Grotesk Light";
+  src: url("../../assets/fonts/Sharp_Grotesk/SharpGrotesk-Book20.otf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Sharp Grotesk Bold";
+  src: url("../../assets/fonts/Sharp_Grotesk/SharpGrotesk-Bold20.otf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Sharp Grotesk Bold10";
+  src: url("../../assets/fonts/Sharp_Grotesk/SharpGrotesk-Bold10.otf")
+    format("truetype");
+}
+
+.title-chat {
+  font-family: "Sharp Grotesk Bold10", sans-serif;
+}
+
+.title-email {
+  font-family: "Sharp Grotesk Bold", sans-serif;
+}
+
+.text-footer {
+  font-family: "Sharp Grotesk Light", sans-serif;
+}
+
+.buttonSubmit {
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.buttonSubmit:hover {
+  background-color: #ff6700;
+  transform: scale(1.1);
+}

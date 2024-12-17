@@ -1,0 +1,29 @@
+@font-face {
+  font-family: "Sharp Grotesk Light";
+  src: url("../../assets/fonts/Sharp_Grotesk/SharpGrotesk-Book20.otf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Sharp Grotesk Bold";
+  src: url("../../assets/fonts/Sharp_Grotesk/SharpGrotesk-Bold20.otf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Sharp Grotesk Bold10";
+  src: url("../../assets/fonts/Sharp_Grotesk/SharpGrotesk-Bold10.otf")
+    format("truetype");
+}
+
+.title {
+  font-family: "Sharp Grotesk Bold", sans-serif;
+}
+
+.desc {
+  font-family: "Sharp Grotesk Light", sans-serif;
+}
+
+.halfCards {
+  background-color: #fde2a6;
+}
