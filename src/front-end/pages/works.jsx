@@ -1,9 +1,39 @@
 import React, { useState } from "react";
 import Card from "../components/card/card";
+import Parallax from '../components/paralax/paralax';
 import SponsoredCarousel from "../components/carousel/carousel";
 import { FaCogs, FaMobileAlt, FaBullhorn, FaPenNib, FaChartLine } from "react-icons/fa";
+import { DotLottieReact } from '@lottiefiles/dotlottie-react'; 
 import '../assets/style/global.css';
 
+import Heskin from '../assets/portofolio/project/heskin.png';
+import urrofi from '../assets/portofolio/project/urofi.png';
+import kalbu from '../assets/portofolio/project/kalbu.png';
+import korlantas from '../assets/portofolio/project/korlantas.png';
+import metro from '../assets/portofolio/project/metro.png';
+import neoTrip from '../assets/portofolio/project/neonTrip.png';
+import sdmpolda from '../assets/portofolio/project/sdm_polda.png';
+import sdmpolda2 from '../assets/portofolio/project/sdm_polda_2.png';
+import uin from '../assets/portofolio/project/uin.png';
+import urofilm from '../assets/portofolio/project/urofilm.png';
+import indobrew from '../assets/portofolio/project/indobrew.png';
+import wimisec from '../assets/portofolio/project/wimisec.png';
+
+
+const projects = [
+  { id: 1, title: "He-Skin Halodoc", image: Heskin },
+  { id: 2, title: "Kepulauan Seribu Apps ", image: kalbu },
+  { id: 3, title: "E-Learning UROFFI", image: urrofi },
+  { id: 4, title: "Metro Nusantara", image: metro },
+  { id: 5, title: "Korlantas Polri", image: korlantas },
+  { id: 6, title: "Vaksinasi Polda", image: sdmpolda },
+  { id: 7, title: "Meonthrift", image: neoTrip },
+  { id: 8, title: "SDM Polda", image: sdmpolda2 },
+  { id: 9, title: "SIAKAD UIN", image: uin },
+  { id: 10, title: "Company Profile URROFI", image: urofilm },
+  { id: 11, title: "E-Commerce INDOBREW", image: indobrew },
+  { id: 12, title: "E-Learning WIMISEC", image: wimisec },
+];
 const contentData = [
   {
     id: 1,
@@ -49,23 +79,23 @@ const contentData = [
   },
 ];
 const categories = [
-    { label: "All", value: "all" },
-    { label: "Developed Applications", value: "apps" },
-    { label: "Content Creation", value: "content" },
-    { label: "Campaign & Social Strategy", value: "campaign" },
-  ];
-  
+  { label: "All", value: "all" },
+  { label: "Developed Applications", value: "apps" },
+  { label: "Content Creation", value: "content" },
+  { label: "Campaign & Social Strategy", value: "campaign" },
+];
 
-  const FilterButton = ({ label, active, onClick }) => {
-    return (
-      <button
-        className={`button-neu ${active ? "active" : ""}`}
-        onClick={onClick}
-      >
-        {label}
-      </button>
-    );
-  };
+
+const FilterButton = ({ label, active, onClick }) => {
+  return (
+    <button
+      className={`button-neu ${active ? "active" : ""}`}
+      onClick={onClick}
+    >
+      {label}
+    </button>
+  );
+};
 
 const Works = () => {
   const [activeCategory, setActiveCategory] = useState("all");
@@ -88,16 +118,15 @@ const Works = () => {
       </header>
 
       <nav className="text-center mb-8">
-  {categories.map((category) => (
-    <FilterButton
-      key={category.value}
-      label={category.label}
-      active={activeCategory === category.value}
-      onClick={() => setActiveCategory(category.value)}
-    />
-  ))}
-</nav>
-
+        {categories.map((category) => (
+          <FilterButton
+            key={category.value}
+            label={category.label}
+            active={activeCategory === category.value}
+            onClick={() => setActiveCategory(category.value)}
+          />
+        ))}
+      </nav>
 
       <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mx-auto w-11/12 max-w-6xl">
         {filteredContent.map((item) => (
@@ -110,6 +139,25 @@ const Works = () => {
           />
         ))}
       </section>
+      <div className="flex flex-wrap justify-center mx-auto bg-black p-5 max-w-6xl">
+        <div className="w-full">
+          <h2 className="text-center text-white w-full">FINISH PROJECT</h2>
+           <div className="w-full" style={{ width: '70%', margin: '0 auto' }}>
+                  <DotLottieReact
+                    src="https://lottie.host/7e308df5-18b2-4f11-b214-df23e4ec10c4/sk2JogOKzd.lottie"
+                    loop
+                    autoplay
+                  />
+                </div>
+        </div>
+        <div className="grid grid-cols-2 gap-4 w-full p-5">
+          {projects.map((project) => (
+            <Parallax key={project.id} title={project.title} image={project.image} />
+          ))}
+        </div>
+      </div>
+
+
       <SponsoredCarousel />
     </div>
   );

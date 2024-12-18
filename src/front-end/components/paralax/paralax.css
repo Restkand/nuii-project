@@ -1,0 +1,39 @@
+.parallax-container {
+    position: relative;
+    cursor: pointer;
+    padding: 20px;
+    border: 1px solid #000;
+    margin-bottom: 20px;
+    width: 100%;
+    border-radius: 20px;
+    background-color: #0d1f36;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.image-container {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.8s ease-in-out;
+}
+
+.image-container img {
+    width: 100%;
+    display: block;
+    transition: transform 0.8s ease-in-out;
+}
+
+.parallax-container:hover .image-container {
+    max-height: 1000px;
+    min-height: 200px;
+}
+
+.parallax-container:hover .image-container img {
+    transform: translateY(20%);
+    max-height: 1000px;
+    background-color: black;
+}
