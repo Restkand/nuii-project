@@ -5,6 +5,7 @@ import Home from './front-end/pages/home';
 import Services from './front-end/pages/services'; 
 import Contact from './front-end/pages/contact'; 
 import Works from './front-end/pages/works'; 
+import Culture from './front-end/pages/culture'; 
 
 function App() {
   const footerRef = useRef(null); // Ref untuk footer di Home
@@ -24,6 +25,7 @@ function App() {
         <Route path="/services" element={<Services />} /> 
         <Route path="/contact" element={<Contact />} /> 
         <Route path="/works" element={<Works />} /> 
+        <Route path="/culture" element={<Culture />} /> 
       </Routes>
     </Router>
   );
