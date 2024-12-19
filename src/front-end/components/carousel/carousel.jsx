@@ -5,18 +5,20 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import handImage from "../../assets/images/hand.png";
 import karitesImage from "../../assets/images/karites.png";
-import leftImage from "../../assets/images/left.png";
-import rightImage from "../../assets/images/right.png";
-import nuiiImage from "../../assets/images/nuii.png";
+import indobrew from "../../assets/images/indobrew.jpg";
+import polda from "../../assets/images/poldaSumbar.jpg";
+import metro from "../../assets/images/Nusantara-Metro-Logo.png";
+import uin from "../../assets/images/uin.png";
 import '../../assets/style/global.css'; 
 
 const SponsoredCarousel = () => {
   const sponsoredData = [
-    { id: 1, image: handImage, title: "Hand Care", content: "Website by Hand Co." },
-    { id: 2, image: karitesImage, title: "Karites", content: "Marketplace Apps by Karites." },
-    { id: 3, image: leftImage, title: "Left Care", content: "Innovative Solutions." },
-    { id: 4, image: rightImage, title: "Right Works", content: "Elevate your workflow." },
-    { id: 5, image: nuiiImage, title: "Nuii Co.", content: "NUii Project" },
+    { id: 1, image: handImage, title: "Hand Care", content: "" },
+    { id: 2, image: karitesImage, title: "KHARITES", content: "" },
+    { id: 3, image: indobrew, title: "INDOBREW", content: "" },
+    { id: 4, image: metro, title: "Metro Nusantara", content: "" },
+    { id: 5, image: uin, title: "UIN Tulung Agung", content: "" },
+    { id: 6, image: polda, title: "POLDA SUMBAR", content: "" },
   ];
 
   const settings = {

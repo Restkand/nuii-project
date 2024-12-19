@@ -1,8 +1,9 @@
 import React from "react";
 import Card from '../components/card/card';
+import Footer from '../components/footer/footer'
 import { FaServer, FaCode, FaLightbulb, FaMobileAlt, FaCloud } from 'react-icons/fa';
 
-const Services = () => {
+const Services  = ({ footerRef }) => {
     return (
         <div className="bg-gray-50 min-h-screen py-10">
             <div className="container mx-auto px-4">
@@ -65,6 +66,9 @@ const Services = () => {
                     </button>
                 </div>
             </div>
+            <div className="footerPage container" ref={footerRef}>
+          <Footer />
+        </div>
         </div>
     );
 };

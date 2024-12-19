@@ -170,3 +170,12 @@ h2 {
   color: #ff6700;
   box-shadow: inset 3px 3px 8px #bebebe, inset -3px -3px 5px #fff;
 }
+.social-media a {
+  display: inline-block;
+  margin-right: 1rem;
+  transition: transform 0.3s;
+}
+
+.social-media a:hover {
+  transform: scale(1.2);
+}

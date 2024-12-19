@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import Card from "../components/card/card";
 import Parallax from '../components/paralax/paralax';
+import Footer from '../components/footer/footer'
 import SponsoredCarousel from "../components/carousel/carousel";
 import { FaCogs, FaMobileAlt, FaBullhorn, FaPenNib, FaChartLine } from "react-icons/fa";
-import { DotLottieReact } from '@lottiefiles/dotlottie-react'; 
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 import '../assets/style/global.css';
 
 import Heskin from '../assets/portofolio/project/heskin.png';
@@ -97,7 +98,7 @@ const FilterButton = ({ label, active, onClick }) => {
   );
 };
 
-const Works = () => {
+const Works = ({ footerRef }) => {
   const [activeCategory, setActiveCategory] = useState("all");
 
   const filteredContent =
@@ -139,26 +140,27 @@ const Works = () => {
           />
         ))}
       </section>
-      <div className="flex flex-wrap justify-center mx-auto bg-black p-5 max-w-6xl">
+      <div className="flex flex-wrap justify-center mx-auto bg-black p-5 max-w-6xl rounded-lg">
         <div className="w-full">
           <h2 className="text-center text-white w-full">FINISH PROJECT</h2>
-           <div className="w-full" style={{ width: '70%', margin: '0 auto' }}>
-                  <DotLottieReact
-                    src="https://lottie.host/7e308df5-18b2-4f11-b214-df23e4ec10c4/sk2JogOKzd.lottie"
-                    loop
-                    autoplay
-                  />
-                </div>
+          <div className="w-full" style={{ width: '70%', margin: '0 auto' }}>
+            <DotLottieReact
+              src="https://lottie.host/7e308df5-18b2-4f11-b214-df23e4ec10c4/sk2JogOKzd.lottie"
+              loop
+              autoplay
+            />
+          </div>
         </div>
-        <div className="grid grid-cols-2 gap-4 w-full p-5">
+        <div className="grid grid-cols-2 gap-4 w-full p-5 ">
           {projects.map((project) => (
             <Parallax key={project.id} title={project.title} image={project.image} />
           ))}
         </div>
       </div>
-
-
       <SponsoredCarousel />
+      <div className="footerPage container" ref={footerRef}>
+        <Footer />
+      </div>
     </div>
   );
 };

@@ -100,18 +100,7 @@ const Home = ({ footerRef }) => {
             <HalfCard title={fourthHalfCards} description={fourthHalfCardsDesc} /> 
           </section>
         </div>
-
-        {/* <section className="mt-6 px-4">
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-blue-500">
-            Welcome to Compro!
-          </h2>
-          <p className="mt-4 text-sm sm:text-base text-gray-700">
-            Compro is a platform to manage your company profile with ease. You can update, manage, and track your company information here.
-          </p>
-        </section> */}
-
         <SponsoredCarousel />
-        
         <div className="footerPage" ref={footerRef}>
           <Footer />
         </div>

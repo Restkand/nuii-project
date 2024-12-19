@@ -36,3 +36,35 @@
   background-color: #ff6700;
   transform: scale(1.1);
 }
+@media (max-width: 768px) {
+  .title-chat {
+    font-size: 4rem; /* Sesuaikan ukuran font untuk tablet */
+  }
+
+  .title-email {
+    font-size: 1.5rem;
+  }
+
+  .text-footer {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .title-chat {
+    font-size: 3rem; /* Ukuran lebih kecil untuk ponsel */
+  }
+
+  .title-email {
+    font-size: 1.2rem;
+  }
+
+  .text-footer {
+    font-size: 0.9rem;
+  }
+
+  .imageCard {
+    height: 200px; /* Sesuaikan ukuran gambar */
+  }
+}
+
