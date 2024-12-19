@@ -1,15 +1,11 @@
-const express = require("express");
-const nodemailer = require("nodemailer");
-const bodyParser = require("body-parser");
-const cors = require("cors");
+import nodemailer from "nodemailer";
 
-const app = express();
-const PORT = 5000;
+export default async function handler(req, res) {
+  if (req.method !== "POST") {
+    res.setHeader("Allow", ["POST"]);
+    return res.status(405).end(`Method ${req.method} Not Allowed`);
+  }
 
-app.use(bodyParser.json());
-app.use(cors());
-
-app.post("/send-email", async (req, res) => {
   const { name, email, message } = req.body;
 
   // Konfigurasi transporter Nodemailer
@@ -17,24 +13,22 @@ app.post("/send-email", async (req, res) => {
     service: "gmail",
     auth: {
       user: "mohamadsamsudin47@gmail.com",
-      pass: "jmpr kafu hizv ywob",
+      pass: "jmpr kafu hizv ywob", // Pastikan menggunakan App Password, bukan password akun Gmail langsung
     },
   });
 
   const mailOptions = {
     from: email,
-    to: "mohamadsamsudin21@gmail.com", // email tujuan
+    to: "mohamadsamsudin21@gmail.com", // Email tujuan
     subject: `Ada pesan baru dari ${name}`,
     text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
   };
 
   try {
     await transporter.sendMail(mailOptions);
-    res.status(200).send("Berhasil Mengirim Email");
+    res.status(200).json({ message: "Berhasil Mengirim Email" });
   } catch (error) {
     console.error(error);
-    res.status(500).send("Gagal Mengirim Email");
+    res.status(500).json({ message: "Gagal Mengirim Email", error: error.message });
   }
-});
-
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+}
