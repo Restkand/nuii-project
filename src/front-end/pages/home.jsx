@@ -56,7 +56,7 @@ const Home = ({ footerRef }) => {
         <div className="home-2 pt-10 pb-10 sm:pt-20 sm:pb-20 px-4 sm:px-10 md:px-20 grid grid-cols-1 sm:grid-cols-12 gap-4 sm:gap-12">      
           <div className='CenterText flex flex-col sm:flex-row justify-center items-center text-center sm:col-span-12 px-4'>
               <img src={myLYellow} alt="Animated left gif" className="w-full max-w-xs sm:max-w-sm leftImage" />
-              <h3 className='tracking-wider text-xl sm:text-3xl md:text-7xl leading-loose'>WITH OUR SINCERITY AND YEARS OF EXPERIENCE, WE ARE COMMITTED TO ELEVATING YOUR BUSINESS TO A HIGHER LEVEL.</h3>
+              <h3 className='tracking-wider text-xl sm:text-3xl md:text-7xl leading-loose'>WITH SINCERITY AND YEARS OF EXPERIENCE, COMMITTED TO ELEVATING YOUR BUSINESS TO A HIGHER LEVEL.</h3>
               <img src={myRYellow} alt="Animated right gif" className="w-full max-w-xs sm:max-w-sm rightImage" />
           </div>
         </div>
@@ -90,7 +90,7 @@ const Home = ({ footerRef }) => {
         <div className='home-4 pb-10 sm:pb-20 px-4 sm:px-10 md:px-20 md:py-20'>
           <div className='titleHome4 grid grid-cols-1 sm:grid-cols-12 gap-4 sm:gap-12'>
               <div className='col-span-12 sm:col-span-8'>
-                  <h2 className='text-3xl sm:text-5xl'>Distribute messages to the right audience <span className='text-purple'>thoughtfully</span> and <span className="text-orange">playfully</span></h2>
+                  <h2 className='text-3xl mt-8 sm:text-5xl'>Distribute messages to the right audience <span className='text-purple'>thoughtfully</span> and <span className="text-orange">playfully</span></h2>
               </div>
           </div>
           <section className="mt-8 sm:mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">

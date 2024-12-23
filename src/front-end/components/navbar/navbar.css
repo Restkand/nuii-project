@@ -96,7 +96,7 @@
 .hamburger.open .bar:nth-child(1) {
   transform: rotate(45deg) translateY(11px);
 }
-
+a
 .hamburger.open .bar:nth-child(2) {
   opacity: 0;
 }

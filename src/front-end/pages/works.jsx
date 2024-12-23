@@ -3,7 +3,7 @@ import Card from "../components/card/card";
 import Parallax from '../components/paralax/paralax';
 import Footer from '../components/footer/footer'
 import SponsoredCarousel from "../components/carousel/carousel";
-import { FaCogs, FaMobileAlt, FaBullhorn, FaPenNib, FaChartLine } from "react-icons/fa";
+import { FaCogs, FaMobileAlt, FaBullhorn, FaPenNib, FaCode, FaChartLine } from "react-icons/fa";
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 import '../assets/style/global.css';
 
@@ -55,14 +55,14 @@ const contentData = [
     category: "content",
     title: "One Planet One Health Campaign",
     description: "Encouraging healthier lifestyles and environmental sustainability.",
-    icon: <FaPenNib />,
+    icon: <FaCode />,
   },
   {
     id: 4,
     category: "content",
     title: "Social Media Content for Dairy Brand",
     description: "Driving engagement and awareness with tailored strategies for brand growth.",
-    icon: <FaBullhorn />,
+    icon: <FaCogs />,
   },
   {
     id: 5,
@@ -108,7 +108,7 @@ const Works = ({ footerRef }) => {
 
   return (
     <div className="">
-      <header className="text-center py-8">
+      {/* <header className="text-center py-8">
         <h2 className="text-3xl md:text-4xl font-bold">
           Giving <span className="text-purple">life</span> to{" "}
           <span className="text-orange">ideas</span>
@@ -139,10 +139,10 @@ const Works = ({ footerRef }) => {
             customStyle={{ backgroundColor: "#f9f9f9", color: "#333" }}
           />
         ))}
-      </section>
-      <div className="flex flex-wrap justify-center mx-auto bg-black p-5 max-w-6xl rounded-lg">
+      </section> */}
+      <div className="flex flex-wrap justify-center mx-auto bg-white p-5 max-w-6xl rounded-lg">
         <div className="w-full">
-          <h2 className="text-center text-white w-full">FINISH PROJECT</h2>
+          <h2 className="text-center text-4xl text-black w-full">FINISH PROJECT</h2>
           <div className="w-full" style={{ width: '70%', margin: '0 auto' }}>
             <DotLottieReact
               src="https://lottie.host/7e308df5-18b2-4f11-b214-df23e4ec10c4/sk2JogOKzd.lottie"
