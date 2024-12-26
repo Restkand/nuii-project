@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 
 // import FeatureCard from '../components/featureCard/featureCard';
 import Cards from '../components/blackCard/blackCard';
@@ -35,6 +36,38 @@ const Home = ({ footerRef }) => {
 
   return (
     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      {/* SEO */}
+      <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "url": "https://nuiiapp.com/",
+            "name": "NuiiApp",
+            "description": "Strengthen your business strategy with our IT solutions",
+          })}
+        </script>
+
+        <title>Home - NuiiApp</title>
+        <meta
+          name="description"
+          content="Strengthen your business strategy with our IT solutions"
+        />
+        <meta
+          name="keywords"
+          content="NuiiApp, IT, Web Developer, Mobile Apps, Flutter, IT Solutions, IT Consultant, IT Bekasi"
+        />
+        <meta name="author" content="NuiiApp Team" />
+        <meta property="og:title" content="Home - NuiiApp" />
+        <meta
+          property="og:description"
+          content="Strengthen your business strategy with our IT solution"
+        />
+        <meta property="og:url" content="https://nuiiapp.com/" />
+        <meta property="og:image" content="../assets/nuiiLogo-white.jpg" />
+      </Helmet>
+
+
       {/* <Navbar /> */}
 
       <main className="bg-white shadow-lg rounded-lg p-4 sm:p-6 lg:p-8">

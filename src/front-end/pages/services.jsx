@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { Helmet } from "react-helmet";
+
 import Card from '../components/card/card';
 import Footer from '../components/footer/footer'
 // import { FaServer, FaCode, FaLightbulb, FaMobileAlt, FaCloud } from 'react-icons/fa';
@@ -77,6 +79,32 @@ const Services  = ({ footerRef }) => {
 
     return (
         <div className="bg-gray-50 min-h-screen py-10">
+            <Helmet>
+                <script type="application/ld+json">
+                    {JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "WebSite",
+                    "url": "https://nuiiapp.com/services",
+                    "name": "NuiiApp",
+                    "description": "Ready to take your business to the next level with multiplatform application?",
+                    })}
+                </script>
+
+                <title>Services - NuiiApp</title>
+                <meta
+                    name="description"
+                    content="Ready to take your business to the next level with multiplatform application?"
+                />
+                <meta name="keywords" content="service NuiiApp, informasi, multiplatform application, Why Choose Us?" />
+                <meta property="og:title" content="Services - NuiiApp" />
+                <meta
+                    property="og:description"
+                    content="Cari tahu lebih banyak tentang apa yang membuat NuiiApp berbeda!"
+                />
+                <meta property="og:url" content="https://nuiiapp.com/services" />
+                <meta property="og:image" content="/" />
+            </Helmet>
+
             <div className="container mx-auto px-4">
                 <h2 className="text-4xl font-bold text-center mb-8">Ready to take your business <br /> to the next level?</h2>
                 

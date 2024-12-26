@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { Helmet } from "react-helmet";
+
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 import Footer from '../components/footer/footer';
 import '../assets/style/global.css';
@@ -94,6 +96,33 @@ const Culture = ({ footerRef }) => {
 
   return (
     <div className="w-full text-gray-800">
+      {/* SEO */}
+        <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "url": "https://nuiiapp.com/culture",
+            "name": "NuiiApp",
+            "description": "Much like Amaterasu emerging from the cave, bringing warmth, clarity, and purpose to the world. Guided by integrity and responsibility, we illuminate paths to progress, empowering innovation to thrive.",
+          })}
+        </script>
+
+          <title>Culture - NuiiApp</title>
+          <meta
+            name="description"
+            content="Radiance of Technology to Empower Progress"
+          />
+          <meta name="keywords" content="culture NuiiApp, tentang NuiiApp, about us, informasi, multiplatform application, Our Culture. Our Team" />
+          <meta property="og:title" content="Culture - NuiiApp" />
+          <meta
+            property="og:description"
+            content="Much like Amaterasu emerging from the cave, bringing warmth, clarity, and purpose to the world. Guided by integrity and responsibility, we illuminate paths to progress, empowering innovation to thrive."
+          />
+          <meta property="og:url" content="https://nuiiapp.com/culture" />
+          <meta property="og:image" content="/" />
+        </Helmet>
+
       <div className="container mx-auto p-8 text-center">
         <h2 className="text-6xl font-bold">
           <span className='text-orange'>Radiance</span> of <span className='text-[#EFBA0F]'>Technology</span> <br /> 

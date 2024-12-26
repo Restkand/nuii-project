@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { Helmet } from "react-helmet";
+
 import Card from "../components/card/card";
 import Parallax from '../components/paralax/paralax';
 import Footer from '../components/footer/footer'
@@ -108,6 +110,33 @@ const Works = ({ footerRef }) => {
 
   return (
     <div className="">
+      {/* SEO */}
+      <Helmet>
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "url": "https://nuiiapp.com/works",
+          "name": "NuiiApp",
+          "description": "All our finished project!",
+        })}
+      </script>
+
+        <title>Works - NuiiApp</title>
+        <meta
+          name="description"
+          content="All our finished project!"
+        />
+        <meta name="keywords" content="works NuiiApp, finish project, informasi, multiplatform application, our experience" />
+        <meta property="og:title" content="Works - NuiiApp" />
+        <meta
+          property="og:description"
+          content="All our finished project!"
+        />
+        <meta property="og:url" content="https://nuiiapp.com/works" />
+        <meta property="og:image" content="/" />
+      </Helmet>
+
       {/* <header className="text-center py-8">
         <h2 className="text-3xl md:text-4xl font-bold">
           Giving <span className="text-purple">life</span> to{" "}

@@ -34,7 +34,7 @@ const Navbar = ({ scrollToFooter }) => {
       <nav className={`nav ${menuOpen ? 'active' : ''}`}>
         <Link to="/services">SERVICES</Link>
         <Link to="/works">WORKS</Link>
-        <Link to="/CULTURE">CULTURE</Link>
+        <Link to="/culture">CULTURE</Link>
         <button onClick={scrollToFooter} className='buttonActive'>CONTACT</button>
       </nav>
     </header>
